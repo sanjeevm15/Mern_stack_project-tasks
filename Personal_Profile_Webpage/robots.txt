@@ -1,0 +1,10 @@
+# robots.txt for your site
+# Allow all crawlers full access (recommended for public personal sites)
+User-agent: *
+Allow: /
+
+# Point crawlers to your sitemap (replace with your real URL)
+Sitemap: https://example.com/sitemap.xml
+
+# If you need to block a folder, uncomment and edit lines like:
+# Disallow: /private/

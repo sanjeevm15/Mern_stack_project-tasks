@@ -1,0 +1,223 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    /* background-color: black; */
+    text-align: left;
+}
+
+/* Page base styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f9;
+    color: #e6eef8;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Use element selectors for headings so HTML doesn't need extra classes */
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: rgb(0, 0, 1);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: rgb(1, 5, 8);
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: rgb(1, 7, 13);
+}
+
+img {
+    border-radius: 6px;
+    display: block;
+    margin: 8px 0;
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 1rem;
+}
+
+/* Layout containers */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.profile .avatar img {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.06);
+}
+
+.about {
+    flex: 1 1 auto;
+    
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.card {
+    background: rgba(255,255,255,0.02);
+    color: #000408;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.columns .card:first-child {
+    flex: 0 0 320px;
+}
+
+.columns .card:last-child {
+    flex: 1 1 auto;
+}
+
+/* Make tables wrap on small screens */
+.table-wrap {
+    overflow-x: auto;
+}
+
+.para {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: rgb(1, 7, 13);
+}  
+
+
+@media (max-width: 720px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .columns .card:first-child {
+        flex-basis: auto;
+    }
+}
+
+/* Header container box that surrounds the header content */
+.headcontainer {
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid rgba(255,255,255,0.08);
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    margin-bottom: 18px;
+}
+
+.headcontainer header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* Contact form styles */
+.contact {
+    margin-top: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 780px;
+}
+
+.contact-form .form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px 12px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form textarea { resize: vertical; }
+
+.contact-form .form-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contact-form button {
+    background: #0b74de;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form .form-note {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+@media (max-width: 720px) {
+    .contact-form { width: 100%; }
+}
+
+.footercontainer {
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid rgba(255,255,255,0.08);
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    margin-top: 18px;
+}
+.footercontainer footer h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Profile — Sanjeev Kumar M</title>
+    <meta name="description" content="Sanjeev Kumar M — Web developer skilled in JavaScript, React, Node.js and Python. Personal profile and contact information.">
+    <link rel="canonical" href="https://example.com/Personal_Profile_Webpage.html">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sanjeev Kumar M — Personal Profile">
+    <meta property="og:description" content="Web developer skilled in JavaScript, React, Node.js and Python.">
+    <meta property="og:url" content="https://example.com/Personal_Profile_Webpage.html">
+    <meta property="og:image" content="https://example.com/my_photo.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sanjeev Kumar M — Personal Profile">
+    <meta name="twitter:description" content="Web developer skilled in JavaScript, React, Node.js and Python.">
+    <meta name="twitter:image" content="https://example.com/my_photo.jpeg">
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://example.com/#person",
+                "name": "Sanjeev Kumar M",
+                "url": "https://example.com/Personal_Profile_Webpage.html",
+                "image": "https://example.com/my_photo.jpeg",
+                "jobTitle": "Web Developer",
+                "description": "Web developer focusing on JavaScript, React, Node.js and Python.",
+                "sameAs": [
+                    "https://github.com/yourusername",
+                    "https://www.linkedin.com/in/yourprofile"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+919092052474",
+                    "contactType": "personal"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "url": "https://example.com/Personal_Profile_Webpage.html",
+                "name": "Sanjeev Kumar M — Personal Profile",
+                "description": "Personal profile page for Sanjeev Kumar M, web developer."
+            }
+        ]
+    }
+    </script>
+    <!-- End structured data -->
+</head>
+<body>
+    <div class="container">
+        <div class="headcontainer">
+        <header>
+            <h1>Welcome to Sanjeev Kumar M's Personal Profile Page</h1>
+        </header>                                                                                      
+        </div>
+
+        <main>
+            <div class="profile">
+                <figure class="avatar">
+                    <img src="my_photo.jpeg" alt="Sanjeev Kumar M" width="140" height="240">
+                </figure>
+                <section class="about">
+                    <h2>About Me</h2>
+                    <p class="para">Hello! My name is Sanjeev Kumar M. I am passionate about technology and web development. 
+                        I enjoy learning new programming languages and frameworks.</p>
+                </section>
+            </div>
+
+            <div class="columns">
+                <aside class="card">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                    </ul>
+
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Watching movies</li>
+                        <li>Upskilling in technology</li>
+                    </ul>
+                </aside>
+
+                <section class="card">
+                    <h2>My Favorites</h2>
+                    <div class="table-wrap">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Favorite Color</th>
+                                    <th>Favorite Food</th>
+                                    <th>Favorite Movie</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Blue</td>
+                                    <td>Pizza</td>
+                                    <td>Inception</td>
+                                </tr>
+                                <tr>
+                                    <td>Green</td>
+                                    <td>Burger</td>
+                                    <td>Dr. Strange</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            
+        </main>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit">Send message</button>
+                    </div>
+                    <p class="form-note">This form is static in the demo — wire the form `action` to a server endpoint or a service like Formspree to receive messages.</p>
+                </form>
+            </section>
+
+            <footer class="footercontainer">
+                <h2>Other contact</h2>
+                <p class="para">You can also reach me at: <a href="tel:+919092052474">9092052474</a></p>
+            </footer>
+    </div>
+</body>
+</html>
