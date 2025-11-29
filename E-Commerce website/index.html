@@ -6,73 +6,104 @@
     <title>XYZ Ecommerce Website</title>
 
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="siteheader">
-            <img src="ecommerce logo.webp" alt="XYZ Ecommerce Logo" class="logo">
-        <nav>
-            <ul>
-                <a href="#" class="list">Home</a>
-                <a href="#" class="list">Products</a>
-                <a href="#" class="list">About Us</a>        
-                <a href="#" class="list">Contact</a>
-                <a href="#" class="list">Cart</a>
-                <a href="#" class="list">FAQ</a>
-                <a href="#" class="list">Support</a>         
-            </ul>         
-              <div class="login">
-                <span class="para1">Already existing user </span> 
-                <a href="#" class="list1">Login</a>
-                
-                <span class="para1">New here</span> 
-                <a href="#" class="list1">Sign Up</a>    
-               </div>
-        </nav>
-        </div>
+            <div class="header-content"> 
+                <img src="ecommerce logo.webp" alt="XYZ Ecommerce Logo" class="logo">
+                <nav>
+                    <ul>
+                        <a href="#" class="list">Home</a>
+                        <a href="#" class="list">Products</a>
+                        <a href="#" class="list">About Us</a>
+                        <a href="#" class="list">Contact</a>
+                        <a href="#" class="list">Cart</a>
+                        <a href="#" class="list">FAQ</a>
+                        <a href="#" class="list">Support</a>
+                    </ul>
+                    <div class="login">
+                        <span class="para1">Already existing user </span>
+                        <a href="#" class="list1">Login</a>
+
+                        <span class="para1">New here</span>
+                        <a href="#" class="list1">Sign Up</a>
+                    </div>
+                </nav>
+            </div>
+            </div>
     </header>
 
     <main>
         <div class="main-container">
-            
-            
+
+
         <div class="searchbar">
             <input type="text" placeholder="Search for products..." class="searchinput">
             <button class="searchbutton">Search</button>
         </div>
-        
+
         <div class="banner">
             <h2>Big Sale! Up to 50% Off on Selected Items, Free Shipping on Orders Over $50!</h2>
         </div>
 
-       
+
         <section>
             <h2>Featured Products</h2>
+            <div class="slider-wrapper product-slider-wrapper">
+            <button class="slider-arrow prev-arrow">&#10094;</button>
             <div class="product-grid">
                 <div class="product-item">
-                    <h3 class="product-card h3">Product 1</h3>
+                    <h3 class="product-card h3">HP Laptop</h3>
                     <div class="product-image-container">
                         <img src="HP laptop.jpg" alt="Product 1" class="product-card img">
                     </div>
-                    <p class="product-card p">Description of Product 1.</p>
                     <p class="product-card p">Price: $10.00</p>
+                    <button class="add-to-cart-button">Add to Cart</button>
                 </div>
                 <div class="product-item">
-                    <h3 class="product-card h3">Product 2</h3>
+                    <h3 class="product-card h3">Acer Laptop</h3>
                     <div class="product-image-container">
                         <img src="acer laptop.jpg" alt="Product 2" class="product-card img">
-                    </div>  
-                    <p class="product-card p">Description of Product 2.</p>
+                    </div>
                     <p class="product-card p">Price: $15.00</p>
+                    <button class="add-to-cart-button">Add to Cart</button>
                 </div>
                 <div class="product-item">
-                    <h3 class="product-card h3">Product 3</h3>
+                    <h3 class="product-card h3">Samsung Phone</h3>
                     <div class="product-image-container">
                         <img src="samsung image.jpg" alt="Product 3" class="product-card img">
                     </div>
-                    <p class="product-card p">Description of Product 3.</p>
-                    <p class="product-card p">Price: $20.00</p>
+                    <p class="product-card p">Price: $20.00</p> 
+                    <button class="add-to-cart-button">Add to Cart</button>
                 </div>
+                <div class="product-item">
+                     <h3 class="product-card h3">Boat Headphones</h3>
+                     <div class="product-image-container">
+                     <img src="headphone.jpg" alt="Product 4" class="product-card img">
+                     </div>
+                     <p class="product-card p">Price: $25.00</p>
+                     <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                     <h3 class="product-card h3">Boult Smart Watch</h3>
+                     <div class="product-image-container">
+                       <img src="smart_watch.jpg" alt="Product 5" class="product-card img">
+                     </div>
+                     <p class="product-card p">Price: $30.00</p>
+                     <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                     <h3 class="product-card h3">Zeb Wireless Mouse</h3>
+                     <div class="product-image-container">
+                     <img src="mouse.jpg" alt="Product 6" class="product-card img">
+                     </div>
+                     <p class="product-card p">Price: $35.00</p>
+                     <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <button class="slider-arrow next-arrow">&#10095;</button>
             </div>
 
             <article>
@@ -82,24 +113,37 @@
 
             <aside>
                 <h2>Customer Reviews</h2>
+                <div class="reviews-slider-wrapper">
+                <button class="slider-arrow prev-arrow">&#10094;</button>
                 <div class="customer-reviews">
                     <div class="review">
-                <p>"Great service and fast shipping!" - Jane D.</p>
+                       <p>"Great service and fast shipping!" - Jane D.</p>
                     </div>
                     <div class="review">
-                <p>"Quality products at affordable prices." - John S.</p>
+                         <p>"Quality products at affordable prices." - John S.</p>
                     </div>
                     <div class="review">
-                <p>"Excellent customer support." - Mary K.</p>
+                         <p>"Excellent customer support." - Mary K.</p>
                     </div>
+                    <div class="review">
+                         <p>"The product quality exceeded my expectations." - Sarah L.</p>
+                     </div>
+                     <div class="review">
+                          <p>"Highly recommend XYZ Ecommerce!" - Mike B.</p>
+                     </div>
+                     <div class="review">
+                          <p>"Fast delivery and great communication." - Anna F.</p>
+                     </div>
                 </div>
+                <button class="slider-arrow next-arrow">&#10095;</button>
+              </div>
             </aside>
         </section>
         </div>
     </main>
-</body>    
+</body>
 <footer>
         <p>&copy; 2024 Ecommerce Website. All rights reserved.</p>
-</footer>  
-    
+</footer>
+
 </html>

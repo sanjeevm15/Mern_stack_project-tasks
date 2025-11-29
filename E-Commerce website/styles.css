@@ -1,316 +1,451 @@
-/* --- 1. Main Header Container (Site Header) --- */
-.siteheader {
-    background-color: #4CAF50; 
-    display: flex;
-    flex-direction: row; 
-    align-items: center; /* Vertically centers the logo and nav */
-    
-    color: white;
-    padding: 10px 20px; /* Add horizontal padding */
-    margin: 10px; 
+/* ========================================================= */
+/* 1. LAYOUT & CONTAINERS (Body, Main Container, Search/Banner) */
+/* ========================================================= */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Subtle light grey background */
+}
+
+.main-container {
+    max-width: 1200px; /* Consistent max-width for main content */
+    margin: 0 auto;
+    border: none;
     border-radius: 8px;
-    border: #4CAF50 solid 2px;
-    height: auto;
-    width: auto; 
+    padding: 25px;
+    background-color: #ffffff; /* Pure white container for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* --- 2. Logo Styling --- */
-.logo {
-    /* Set a reasonable size for the logo */
-    width: 120px; 
-    height: auto;
-    margin-right: 30px; /* Space between logo and navigation */
-    border-radius: 5px;
+/* --- SALE BANNER (Golden Accent) --- */
+.banner {
+    background-color: #ff9900; /* Elegant Gold Accent */
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 30px auto;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* --- 3. Navigation Container (nav) --- */
-nav {
-    /* Allow nav to take up all remaining horizontal space */
-    flex-grow: 1; 
+.banner h2 {
+    margin: 0;
+    font-size: 26px;
+    color:white; /* Darker text for contrast on gold */
+    font-weight: 600;
+}
+
+.searchbar {
+    margin: 20px auto 40px auto;
+    text-align: center;
+}
+
+.searchinput {
+    width: 350px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    transition: border-color 0.3s;
+}
+.searchinput:focus {
+    border-color: #004d40; /* Dark Green focus color */
+    outline: none;
+}
+
+.searchbutton {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #004d40; /* Primary: Deep Forest Green */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* ========================================================= */
+/* 2. HEADER & NAVIGATION */
+/* ========================================================= */
+
+/* 1. Outer Container: Sets Full-Width Background */
+.siteheader {
+    background-color: #004d40; /* Primary: Deep Forest Green */
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* 2. Inner Container: Manages Content Alignment */
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
     display: flex;
-    justify-content: space-between; /* Pushes the 'ul' to the left and '.login' to the right */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-right: 50px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centered navigation links */
     align-items: center;
 }
 
-/* --- 4. Main Link List (ul) --- */
 nav ul {
-    /* Remove default list styles and align links */
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* --- 5. Login/Signup Section --- */
 .login {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space out the login elements */
+    gap: 10px;
+    flex-shrink: 0;
 }
 
-/* --- 6. Adjust List/Button Colors (for visibility on the green background) --- */
+/* Nav and Login Links */
 .list, .list1 {
-    /* Make buttons visually match the header */
-    background-color: #4CAF50; 
-    color: white; 
-    border: 1px solid white;
-    font-weight: normal; 
-    padding: 5px 10px; 
-    margin: 0 5px; 
-    text-decoration: none;
-    border-radius: 5px;
-}
-.para1 {
-    color: white; /* Ensure text is visible */
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.main-container {
-    max-width: auto;
-    margin: 0 3px;
-    border: #ccc solid 1px;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: coral;
-    align-items: center
-}
-
-/* h1 {
-    font-size: 30px;
-    margin: 5px;
-    text-align:left;
-    color: #333;
-}
-
-.login {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.hoverlink:hover {
-    background-color: lightblue;
-    color: white;
-    border-radius: 5px;
-}   
-
-
-.list {
-    margin: 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-    border: 0.5px solid white;
-    padding: 3px;
-    border-radius: 10px;
-    height: auto;
-    width: auto;
-    background-color:lightgray;
-}
-
-.list1 {
-    margin: 5px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-    border: 0.5px solid white;
-    padding: 3px;
-    border-radius: 10px;
-    background-color:lightgrey;
-    justify-content:center;
-    align-items: center; 
-}
-
-
-.para1 {
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;  
-    text-align: center;
-} */
-
-.searchbar {
-    margin: 20px auto;
-    text-align: center;
-    margin-left: 600px;
-}                                               
-
-.searchinput {
-    width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.searchbutton {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
+    background-color: transparent;
     color: white;
     border: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    margin: 0 5px;
+    text-decoration: none;
     border-radius: 4px;
-    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
+/* Login/Signup button stands out with golden accent */
+.login .list1 {
+    background-color: #d4af37; /* Golden Accent */
+    color: #333333; /* Darker text for contrast on gold */
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: none;
+}
+
+.para1 {
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* ========================================================= */
+/* 3. HOVER EFFECTS */
+/* ========================================================= */
 
 .searchbutton:hover {
-    background-color: #45a049;
-}                       
-
-h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 25px;
-    color: #333;
+    background-color: #00796b; /* Lighter green on hover */
+    transform: scale(1.02);
 }
 
-p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-    margin: 10px 0;
+.list:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Subtle white overlay */
+    transform: none;
+    box-shadow: none;
+}
+.login .list1:hover {
+    background-color: #c09f30; /* Slightly darker gold on hover */
+    transform: scale(1.05);
 }
 
-/* --- PRODUCT GRID & ITEMS --- */
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d4af37; /* Golden border on hover */
+}
 
+.review:hover {
+    background-color: #e6ffe6; /* Very light green for review hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================================= */
+/* 4. PRODUCT GRID (SLIDER SETUP) */
+/* ========================================================= */
+
+/* --- SLIDER WRAPPER STYLES --- */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+/* --- ARROW STYLES --- */
+.slider-arrow {
+    background-color: #004d40; /* Primary: Deep Forest Green */
+    color: white;
+    border: none;
+    padding: 18px 12px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 6px;
+    z-index: 10;
+    margin: 0 10px;
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+}
+
+.slider-arrow:hover {
+    background-color: #00796b; /* Lighter green on hover */
+}
+
+/* --- PRODUCT GRID CONTAINER --- */
 .product-grid {
-    display: grid;
-    /* Use repeat(auto-fit, ...) for responsive columns */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px;
-    padding: 20px;
-    border: #ccc solid 1px;
-    border-radius: 8px;
-    margin: auto;
-    background-color: #e09f9f;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    flex-grow: 1;
+    overflow-x: hidden;
+    background-color: #fcfcfc; /* Almost white in a light grey container */
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* --- PRODUCT GRID & ITEMS --- */
+.product-grid::-webkit-scrollbar {
+    display: none;
+}
 
-/* --- PRODUCT ITEM CONTAINER --- */
+/* --- PRODUCT CARD STYLES --- */
+
 .product-item {
-    border: 1px solid #ccc;
+    flex-shrink: 0;
+    width: 280px;
+    border: 1px solid #eee; /* Very subtle border */
     border-radius: 8px;
-    padding: 10px;
+    padding: 20px 10px;
     text-align: center;
-    /* Use a generous height for the entire card to prevent overflow */
-    height: auto; 
-    overflow: hidden; 
-    display: flex; 
+    height: auto;
+    overflow: hidden;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    background-color: #fff;     
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .product-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Set a fixed width for the image area to accommodate wide images */
     width: 200px;
-    /* Set a large, fixed height for the image area to give wide images vertical room */
-    height: 200px; 
-    margin: 0 auto 10px auto; 
-    /* Ensures the image content fits within this box */
-    overflow: hidden; 
+    height: 200px;
+    margin: 0 auto 10px auto;
+    overflow: hidden;
 }
 
-/* 🖼️ The Image itself */
 .product-card img {
-    /* Image is forced to fill the entire container box */
-    width: 100%; 
-    height: 100%;    
-    /* CRITICAL: Ensures the entire image is visible (not cropped) */
-    object-fit: contain;    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     border-radius: 8px;
 }
 
-/* Existing styles below for h3 and p */
-.product-card h3 {
-    font-size: 18px;
+.product-item p {
     margin: 10px 0;
-}
-
-.product-card p {
     font-size: 16px;
     color: #333;
-    margin-top: 5px;
+    font-weight: bold;
 }
 
+/* .product-item .add-to-cart-button {
+    margin-top: 15px;
+    padding: 10px 0;
+    background-color: #004d40; 
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+} */
+
+.product-item .add-to-cart-button {
+    /* Style the button container */
+    width: 70%; /* Make button nearly full width of the card */
+    padding: 10px 0;
+    margin: 15px auto 5px auto; /* Center button and give it space */
+    display: block; /* Important for using width/margin auto */
+    
+    /* Colors and typography */
+    background-color:gold; /* Primary: Deep Forest Green */
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    
+    /* Shape and interactions */
+    border: none;
+    border-radius: 25px; /* Fully rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.product-item .add-to-cart-button:hover {
+    background-color: #004d40; /* Golden Accent on hover */
+    color: white  ; /* Darker text on gold for better contrast */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================================= */
+/* 5. REVIEWS & ARTICLES */
+/* ========================================================= */
+
+article p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+    margin: auto 0;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* --- REVIEWS SLIDER WRAPPER STYLE --- */
+.reviews-slider-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+    position: relative;
+    background-color: #f8f8f8; /* Slightly lighter grey than body, but darker than main-container */
+    border-radius: 8px;
+}
+
+.customer-reviews {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    flex-grow: 1;
+    overflow-x: hidden;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.customer-reviews::-webkit-scrollbar {
+    display: none;
+}
+
+.review {
+    flex-shrink: 0;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-style: italic;
+    color: #444;
+    border: none;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff; /* Pure white review boxes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.review p {
+    margin: 0;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* ========================================================= */
+/* 6. FOOTER & MEDIA QUERIES */
+/* ========================================================= */
 
 footer {
-    background-color: #f1f1f1;
+    background-color: #222; /* Darker charcoal footer */
     text-align: center;
-    padding: 10px;
-    /* position: fixed; */
+    padding: 20px;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #ccc;
+    border-top: none;
+    color: #ccc;
 }
 
 footer p {
     margin: 0;
     font-size: 14px;
-    color: #777;
+    color: #ccc;
 }
 
+/* --- MOBILE RESPONSIVENESS (Max-width: 600px) --- */
+@media (max-width: 600px) {
+    /* Header content stacking for mobile */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Adjust padding for mobile header */
+    }
 
-.customer-reviews {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-   gap: 20px;
-   padding: 20px;
-   border: #ccc solid 1px;
-   border-radius: 8px;
-   margin: auto;
-   background-color: #f9f9f9;
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
 
-}
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 
-article p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-    margin: auto 0;
-    text-align: center;
-    border: #333 solid 1px;
-    padding: 10px;
-    border-radius: 8px;         
-    background-color:rgb(173, 237, 240);
-}
+    .login {
+        margin-top: 10px; /* Add space above login section */
+    }
 
-.review {
-    font-style: italic;
-    color: #555;
-    margin-bottom: auto;
-    justify-content: space-between;
-    border: #333 solid 1px;
-    padding: 10px;
-    border-radius: 8px;
-    background-color:rgb(173, 237, 240);
-}
+    /* Product and review grids stacking for mobile */
+    .product-grid,
+    .customer-reviews {
+        overflow-x: visible;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
 
-.banner {
-    background-color:greenyellow;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px auto;
-    border: #333 solid 1px;
-}
+    .product-item,
+    .review {
+        width: 95%;
+        margin-bottom: 20px;
+    }
 
-.banner h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
-}
-
-@media query (max-width: 600px) {
-    .product-grid {
-        grid-template-columns: 1fr; 
+    .slider-wrapper,
+    .reviews-slider-wrapper {
+        max-width: 100%;
+    }
+    .slider-arrow {
+        display: none;
     }
 }
-    
